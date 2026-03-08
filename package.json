@@ -1,0 +1,17 @@
+{
+  "name": "ranran-frontend",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "dev:web": "turbo dev --filter=@ranran/web",
+    "build:web": "turbo build --filter=@ranran/web",
+    "start:web": "turbo start --filter=@ranran/web"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  },
+  "packageManager": "pnpm@10.6.5"
+}
