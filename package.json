@@ -6,9 +6,9 @@
     "build": "turbo build",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
-    "dev:web": "turbo dev --filter=@ranran/web",
-    "build:web": "turbo build --filter=@ranran/web",
-    "start:web": "turbo start --filter=@ranran/web"
+    "dev:wishes": "turbo dev --filter=@ranran/wishes",
+    "build:wishes": "turbo build --filter=@ranran/wishes",
+    "start:wishes": "turbo start --filter=@ranran/wishes"
   },
   "devDependencies": {
     "turbo": "^2"
