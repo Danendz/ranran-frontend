@@ -7,7 +7,8 @@
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "dev:wishes": "turbo dev --filter=@ranran/wishes",
-    "build:wishes": "turbo build --filter=@ranran/wishes"
+    "build:wishes": "turbo build --filter=@ranran/wishes",
+    "start:wishes": "turbo start --filter=@ranran/wishes"
   },
   "devDependencies": {
     "turbo": "^2"

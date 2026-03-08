@@ -48,8 +48,7 @@ packages/
 
 ## Deployment (Railway)
 
-Each app is deployed as a **Static Site** on Railway:
-
 - Build command: `pnpm build:<app>` (e.g. `pnpm build:wishes`)
-- Output directory: `apps/<app>/dist` (e.g. `apps/wishes/dist`)
-- No start command needed — Railway serves the static files via CDN
+- Start command: `pnpm start:<app>` (e.g. `pnpm start:wishes`)
+- Uses `serve --single --listen $PORT dist` for SPA-safe static serving
+- `railway.json` in each app configures this automatically

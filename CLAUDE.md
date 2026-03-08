@@ -12,6 +12,7 @@ Turborepo + pnpm monorepo for the Ranran frontend. Vue 3 + Vite as default frame
 | `pnpm lint` | Lint all |
 | `pnpm dev:wishes` | Dev apps/wishes only |
 | `pnpm build:wishes` | Build apps/wishes only |
+| `pnpm start:wishes` | Serve apps/wishes dist (Railway) |
 
 ## Structure
 
@@ -23,12 +24,12 @@ packages/
 
 ## Railway Deploy Pattern
 
-Each app is deployed as a **Static Site** on Railway:
 - Build command: `pnpm build:<app>` (e.g. `pnpm build:wishes`)
-- Output directory: `apps/<app>/dist` (e.g. `apps/wishes/dist`)
-- No start command — Railway serves static files via CDN
+- Start command: `pnpm start:<app>` (e.g. `pnpm start:wishes`)
+- Uses `serve --single --listen $PORT dist` — SPA-safe, production-grade static server
+- `railway.json` in each app configures build command, start command, and watch patterns
 
-Adding a new app: scaffold in `apps/`, set `name: @ranran/<name>`, add `dev:<name>` / `build:<name>` to root `package.json`.
+Adding a new app: scaffold in `apps/`, set `name: @ranran/<name>`, add `dev:<name>` / `build:<name>` / `start:<name>` to root `package.json`.
 
 ## Auth (`@ranran/shared`)
 

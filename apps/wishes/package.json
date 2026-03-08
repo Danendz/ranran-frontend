@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
+    "start": "serve --single --listen $PORT dist",
     "lint": "eslint src/",
     "type-check": "vue-tsc --noEmit"
   },
@@ -14,6 +15,7 @@
     "@ranran/shared": "workspace:*",
     "@tailwindcss/vite": "^4.2.1",
     "pinia": "^2",
+    "serve": "^14.2.6",
     "tailwindcss": "^4.2.1",
     "vue": "^3.5.25",
     "vue-router": "^4"
